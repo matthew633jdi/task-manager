@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/taskdb
+    username: postgres
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: validate # 엔티티와 테이블 구조가 맞는지 확인만 함
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect

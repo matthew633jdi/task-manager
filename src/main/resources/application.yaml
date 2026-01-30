@@ -1,3 +1,12 @@
 spring:
-  application:
-    name: task-manager
+  profiles:
+    active: local # 기본적으로 local 프로필을 사용하도록 설정
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none # 실무에서는 데이터 유실 방지를 위해 기본값을 none으로 둡니다.
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+        default_batch_fetch_size: 100 # N+1 문제 완화를 위한 설정

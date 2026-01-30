@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;MODE=PostgreSQL # PostgreSQL 모드로 동작하도록 설정
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true # 웹에서 DB 확인 가능
+  jpa:
+    hibernate:
+      ddl-auto: create-drop # 로컬은 켰다 끄면 데이터 초기화
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
